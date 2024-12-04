@@ -12,4 +12,13 @@
         <PackageReference Include="MudBlazor" Version="7.15.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Layouts\MainLayout.razor" />
+      <_ContentIncludedByDefault Remove="DummyData\DummyData.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Shared\Layouts\MainLayout.razor" />
+    </ItemGroup>
+
 </Project>
