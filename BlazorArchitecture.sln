@@ -6,6 +6,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{592FAEB3-5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorArchitecture.WasmApp", "src\BlazorArchitecture.WasmApp\BlazorArchitecture.WasmApp.csproj", "{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{0CCA8B68-919E-4774-89EA-AFA42856FE56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bootstrap-gen", "bootstrap-gen", "{F93731A1-2480-4CFD-8F14-C68161505425}"
+	ProjectSection(SolutionItems) = preProject
+		tools\bootstrap-gen\package.json = tools\bootstrap-gen\package.json
+		tools\bootstrap-gen\bootstrap.scss = tools\bootstrap-gen\bootstrap.scss
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{36E78CE4-9D45-4D1A-B6F1-1BF574AB9963}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +26,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6} = {CC97E348-7EA0-4DAC-B947-53DEA9F38B9B}
+		{F93731A1-2480-4CFD-8F14-C68161505425} = {0CCA8B68-919E-4774-89EA-AFA42856FE56}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
