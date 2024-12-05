@@ -1,16 +1,6 @@
 @page "/"
+@using BlazorArchitecture.WasmApp.Products.Shared.Components
 
 <h1>Products</h1>
 
-<MudTable Items="@_products" Hover="true">
-    <HeaderContent>
-        <MudTh>Id</MudTh>
-        <MudTh>Name</MudTh>
-        <MudTh>Price</MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="Id">@context.Id</MudTd>
-        <MudTd DataLabel="Name">@context.Name</MudTd>
-        <MudTd DataLabel="Price">@context.Price</MudTd>
-    </RowTemplate>
-</MudTable>
+<ProductsTable Products="@_products" />

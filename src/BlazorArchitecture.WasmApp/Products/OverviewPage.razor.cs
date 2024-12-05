@@ -10,10 +10,9 @@ public partial class OverviewPage : ComponentBase
 
     private IEnumerable<Product> _products = [];
     
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync()
     {
-        await Task.Delay(0);
-
         _products = ProductApiService.GetProducts();
+        return Task.CompletedTask;
     }
 }
