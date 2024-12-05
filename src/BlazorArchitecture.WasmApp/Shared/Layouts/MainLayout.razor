@@ -1,9 +1,15 @@
-﻿@inherits LayoutComponentBase
+﻿@using BlazorArchitecture.WasmApp.Shared.Components
+@inherits LayoutComponentBase
 
 <MudThemeProvider />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+
+<Header>
+    <div>Left</div>
+    <div>Right</div>
+</Header>
 
 <div class="container">
     @Body

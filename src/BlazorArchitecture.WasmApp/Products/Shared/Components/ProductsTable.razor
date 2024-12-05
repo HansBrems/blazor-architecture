@@ -1,4 +1,9 @@
-<MudTable Items="@Products" Hover="true">
+@using BlazorArchitecture.WasmApp.Products.Shared.Models
+
+<MudTable T="Product"
+          Items="@Products"
+          Hover="true"
+          OnRowClick="HandleRowClick">
     <HeaderContent>
         <MudTh>Id</MudTh>
         <MudTh>Name</MudTh>

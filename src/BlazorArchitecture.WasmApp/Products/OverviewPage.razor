@@ -1,6 +1,16 @@
 @page "/"
 @using BlazorArchitecture.WasmApp.Products.Shared.Components
+@using BlazorArchitecture.WasmApp.Shared.Components
 
-<h1>Products</h1>
+<StackLayout>
+    <h1>Products</h1>
+    <ProductsTable Products="@_products"
+                   OnRowClick="ToggleOverlay"/>
+</StackLayout>
 
-<ProductsTable Products="@_products" />
+<MudOverlay @bind-Visible="_isOverlayVisible"
+            DarkBackground
+            AutoClose="true"
+            OnClosed="OnOverlayClosed">
+    <div>@_selectedProductId</div>
+</MudOverlay>
