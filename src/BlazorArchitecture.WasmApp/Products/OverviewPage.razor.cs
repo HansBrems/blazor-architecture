@@ -1,32 +1,44 @@
 using BlazorArchitecture.WasmApp.Products.Shared.Models;
 using BlazorArchitecture.WasmApp.Products.Shared.Services;
+using BlazorArchitecture.WasmApp.Shared.Components;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+using MudBlazor;
 
 namespace BlazorArchitecture.WasmApp.Products;
 
 public partial class OverviewPage : ComponentBase
 {
+    [Inject] public IDialogService DialogService { get; set; } = null!;
     [Inject] public IProductApiService ProductApiService { get; init; } = null!;
 
     private IEnumerable<Product> _products = [];
-    private bool _isOverlayVisible = false;
-    private int? _selectedProductId;
     
     protected override Task OnInitializedAsync()
     {
         _products = ProductApiService.GetProducts();
         return Task.CompletedTask;
     }
-
-    private void OnOverlayClosed()
+    
+    private async Task Delete()
     {
-        Console.WriteLine("It's closed!");
+        var options = new DialogOptions { CloseOnEscapeKey = true };
+        var dialog = await DialogService.ShowAsync<ConfirmationDialog>("Are you really sure about what you're doing?", options);
+        var result = await dialog.Result;
+
+        var message = "No result";
+
+        if (result != null)
+        {
+            message = result.Canceled
+                ? "The dialog was cancelled"
+                : $"Result from the dialog {result.Data}";            
+        }
+        
+        Console.WriteLine(message);
     }
-
-    private void ToggleOverlay(int productId)
+    
+    private void NavigateToDetailPage()
     {
-        _selectedProductId = productId;
-        _isOverlayVisible = true;
+        Console.WriteLine("Navigating to detail page");
     }
 }
