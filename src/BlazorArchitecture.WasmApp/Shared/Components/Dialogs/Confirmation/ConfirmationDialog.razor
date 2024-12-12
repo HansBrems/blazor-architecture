@@ -1,0 +1,22 @@
+<MudDialog>
+    <DialogContent>
+        <div class="d-flex gap-8 align-items-center">
+            @if (ConfirmationType == ConfirmationType.Warning)
+            {
+                <img src="/images/warning.svg" />    
+            }
+            
+            @if (ConfirmationType == ConfirmationType.Danger)
+            {
+                <img src="/images/danger.svg" />
+            }
+            
+            <MudText>@ContentText</MudText>
+        </div>
+    </DialogContent>
+    
+    <DialogActions>
+        <MudButton Variant="Variant.Filled" OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">@ButtonText</MudButton>
+    </DialogActions>
+</MudDialog>

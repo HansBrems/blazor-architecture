@@ -1,6 +1,8 @@
 using BlazorArchitecture.WasmApp.Products.Shared.Models;
 using BlazorArchitecture.WasmApp.Products.Shared.Services;
 using BlazorArchitecture.WasmApp.Shared.Components;
+using BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
+using BlazorArchitecture.WasmApp.Shared.Extensions;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
@@ -21,10 +23,11 @@ public partial class OverviewPage : ComponentBase
     
     private async Task Delete()
     {
-        var options = new DialogOptions { CloseOnEscapeKey = true };
-        var dialog = await DialogService.ShowAsync<ConfirmationDialog>("Are you really sure about what you're doing?", options);
-        var result = await dialog.Result;
-
+        var result = await DialogService.ShowConfirmationDialog("Delete", "Message", options =>
+        {
+            options.ConfirmationType = ConfirmationType.Danger;
+        });
+        
         var message = "No result";
 
         if (result != null)
