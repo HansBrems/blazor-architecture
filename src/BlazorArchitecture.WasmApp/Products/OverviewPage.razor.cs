@@ -2,7 +2,6 @@ using BlazorArchitecture.WasmApp.Products.Shared.Models;
 using BlazorArchitecture.WasmApp.Products.Shared.Services;
 using BlazorArchitecture.WasmApp.Shared.Components;
 using BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
-using BlazorArchitecture.WasmApp.Shared.Extensions;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 

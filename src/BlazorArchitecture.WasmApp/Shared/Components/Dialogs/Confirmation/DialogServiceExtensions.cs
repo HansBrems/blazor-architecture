@@ -1,13 +1,6 @@
-using BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
 using MudBlazor;
 
-namespace BlazorArchitecture.WasmApp.Shared.Extensions;
-
-public class ConfirmationDialogOptions
-{
-    public string ButtonText { get; set; } = "Ok";
-    public ConfirmationType ConfirmationType { get; set; } = ConfirmationType.Neutral;
-}
+namespace BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
 
 public static class DialogServiceExtensions
 {
