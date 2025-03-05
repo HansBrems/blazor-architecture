@@ -1,4 +1,4 @@
-﻿@using BlazorArchitecture.WasmApp.Shared.Components
+﻿@using BlazorArchitecture.WasmApp.Shared.Components.Header
 @inherits LayoutComponentBase
 
 <MudThemeProvider />
@@ -6,10 +6,10 @@
 <MudDialogProvider />
 <MudSnackbarProvider />
 
-<Header>
+<AppHeader>
     <div>Left</div>
     <div>Right</div>
-</Header>
+</AppHeader>
 
 <div class="container">
     @Body

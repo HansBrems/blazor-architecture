@@ -1,6 +1,6 @@
-using BlazorArchitecture.WasmApp.Products.Shared.Models;
+using BlazorArchitecture.WasmApp.Features.Products.Shared.Models;
 
-namespace BlazorArchitecture.WasmApp.Products.Shared.Services;
+namespace BlazorArchitecture.WasmApp.Features.Products.Shared.Services;
 
 public class ProductApiService : IProductApiService
 {

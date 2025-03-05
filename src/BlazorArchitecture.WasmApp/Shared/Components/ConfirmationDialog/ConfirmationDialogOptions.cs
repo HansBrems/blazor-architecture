@@ -1,4 +1,4 @@
-namespace BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
+namespace BlazorArchitecture.WasmApp.Shared.Components.ConfirmationDialog;
 
 public class ConfirmationDialogOptions
 {

@@ -1,6 +1,6 @@
 using MudBlazor;
 
-namespace BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
+namespace BlazorArchitecture.WasmApp.Shared.Components.ConfirmationDialog;
 
 public static class DialogServiceExtensions
 {
@@ -11,14 +11,14 @@ public static class DialogServiceExtensions
         configure?.Invoke(confirmationDialogOptions);
         
         var options = new DialogOptions { CloseOnEscapeKey = true, MaxWidth = MaxWidth.Small, FullWidth = true };
-        var parameters = new DialogParameters<ConfirmationDialog>
+        var parameters = new DialogParameters<AppConfirmationDialog>
         {
             { x => x.ButtonText, confirmationDialogOptions.ButtonText },
             { x => x.ContentText, contentText },
             { x => x.ConfirmationType, confirmationDialogOptions.ConfirmationType }
         };
         
-        var dialog = await dialogService.ShowAsync<ConfirmationDialog>(title, parameters, options);
+        var dialog = await dialogService.ShowAsync<AppConfirmationDialog>(title, parameters, options);
         return await dialog.Result;    
     }
 }

@@ -1,4 +1,4 @@
-namespace BlazorArchitecture.WasmApp.Products.Shared.Models;
+namespace BlazorArchitecture.WasmApp.Features.Products.Shared.Models;
 
 public class Product
 {

@@ -1,11 +1,10 @@
-using BlazorArchitecture.WasmApp.Products.Shared.Models;
-using BlazorArchitecture.WasmApp.Products.Shared.Services;
-using BlazorArchitecture.WasmApp.Shared.Components;
-using BlazorArchitecture.WasmApp.Shared.Components.Dialogs.Confirmation;
+using BlazorArchitecture.WasmApp.Features.Products.Shared.Models;
+using BlazorArchitecture.WasmApp.Features.Products.Shared.Services;
+using BlazorArchitecture.WasmApp.Shared.Components.ConfirmationDialog;
 using Microsoft.AspNetCore.Components;
 using MudBlazor;
 
-namespace BlazorArchitecture.WasmApp.Products;
+namespace BlazorArchitecture.WasmApp.Features.Products.Overview;
 
 public partial class OverviewPage : ComponentBase
 {
