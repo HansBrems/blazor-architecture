@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{36
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorArchitecture.Gateway", "src\BlazorArchitecture.Gateway\BlazorArchitecture.Gateway.csproj", "{4425B2BB-868A-44A7-8BC1-602E92F1B5B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,11 +29,16 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6} = {CC97E348-7EA0-4DAC-B947-53DEA9F38B9B}
 		{F93731A1-2480-4CFD-8F14-C68161505425} = {0CCA8B68-919E-4774-89EA-AFA42856FE56}
+		{4425B2BB-868A-44A7-8BC1-602E92F1B5B0} = {CC97E348-7EA0-4DAC-B947-53DEA9F38B9B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9D80242-7222-4AA0-B0E6-C9956F1A28F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4425B2BB-868A-44A7-8BC1-602E92F1B5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4425B2BB-868A-44A7-8BC1-602E92F1B5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4425B2BB-868A-44A7-8BC1-602E92F1B5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4425B2BB-868A-44A7-8BC1-602E92F1B5B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
