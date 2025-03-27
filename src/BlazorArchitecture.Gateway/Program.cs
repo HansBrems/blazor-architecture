@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using BlazorArchitecture.Gateway;
 using BlazorArchitecture.Gateway.Products;
 using BlazorArchitecture.Gateway.Startup;
 using Scalar.AspNetCore;
@@ -7,6 +6,7 @@ using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.AddCorsSetup();
 builder.AddMediatRSetup();
 
 var app = builder.Build();
@@ -31,8 +31,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseCorsSetup();
 app.UseHttpsRedirection();
-
 app.MapProductEndpoints();
-
 app.Run();

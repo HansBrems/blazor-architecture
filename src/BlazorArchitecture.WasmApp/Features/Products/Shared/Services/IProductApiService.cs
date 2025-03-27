@@ -4,5 +4,5 @@ namespace BlazorArchitecture.WasmApp.Features.Products.Shared.Services;
 
 public interface IProductApiService
 {
-    IEnumerable<Product> GetProducts();
+    Task<IEnumerable<Product>> GetProducts();
 }

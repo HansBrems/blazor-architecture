@@ -1,19 +1,17 @@
 @page "/"
 @using BlazorArchitecture.WasmApp.Features.Products.Shared.Components.ProductsTable
-@using BlazorArchitecture.WasmApp.Features.Products.Shared.Models
-@using BlazorArchitecture.WasmApp.Shared.Components
 @using BlazorArchitecture.WasmApp.Shared.Components.StackLayout
 
 <AppStackLayout>
   <h1>Products</h1>
 
-  <AppProductsTable Products="@_products"
-                 OnRowClick="NavigateToDetailPage"/>
+  <AppProductsTable Products="@Vm.Products"
+                 OnRowClick="@Vm.NavigateToDetailPage" />
 
   <div>
     <MudButton Variant="Variant.Filled"
                Color="Color.Error"
-               OnClick="Delete">
+               OnClick="@Vm.Delete">
       Delete
     </MudButton>
   </div>

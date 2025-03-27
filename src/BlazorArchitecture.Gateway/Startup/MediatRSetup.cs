@@ -1,4 +1,5 @@
 using BlazorArchitecture.Gateway.Products.GetProduct;
+using BlazorArchitecture.Gateway.Shared;
 
 namespace BlazorArchitecture.Gateway.Startup;
 
@@ -9,7 +10,7 @@ public static class MediatRSetup
         builder.Services.AddMediatR(options =>
         {
             options
-                //.AddOpenBehavior(typeof(ErrorBehavior<,>))
+                .AddOpenBehavior(typeof(ErrorInterceptor<,>))
                 .RegisterServicesFromAssemblies(
                     typeof(GetProductQuery).Assembly,
                     typeof(GetProductQueryHandler).Assembly

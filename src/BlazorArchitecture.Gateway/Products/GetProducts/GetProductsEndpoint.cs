@@ -19,6 +19,4 @@ public static class GetProductsEndpoint
         var result = await mediator.Send(new GetProductsQuery());
         return result.Match(Results.Ok, error => Results.Problem(error.ErrorMessage));
     }
-
-    
 }

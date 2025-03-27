@@ -19,7 +19,8 @@ public class GetProductQueryHandler : IRequestHandler<GetProductQuery, Result<Pr
         return new Product
         {
             ProductId = 1,
-            Name = "Table"
+            Name = "Table",
+            Price = 50
         };
     }
 }
